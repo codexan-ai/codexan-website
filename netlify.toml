@@ -1,15 +1,12 @@
-# Netlify auto-detects Next.js and installs @netlify/plugin-nextjs.
-# Do NOT declare the plugin or a publish dir here — that causes
-# "plugin not found in node_modules" errors. Just set the build command
-# and Node version.
+# Static site (Next.js `output: 'export'`). No Netlify Next.js runtime
+# needed — Netlify just serves the static files from `out/`.
 
 [build]
   command = "next build"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
-  # Don't fail the build on lint warnings (Next 16 will surface deprecations
-  # we don't need to block on for an initial deploy).
   NEXT_TELEMETRY_DISABLED = "1"
 
 # Don't index the admin on search engines

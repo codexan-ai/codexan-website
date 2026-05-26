@@ -1,0 +1,14 @@
+{
+  "eyebrow": "Cloud Consultancy · Managed Services",
+  "headlineStart": "Engineer the cloud your",
+  "headlineAccent": "business deserves.",
+  "subhead": "Codexan partners with startups and global enterprises to migrate, modernize, and operate cloud platforms on AWS, Azure, GCP, and private cloud — with measurable cost, performance, and security outcomes.",
+  "primaryCta": "Start a project",
+  "secondaryCta": "Explore services",
+  "stats": [
+    { "value": "120+", "label": "Cloud migrations delivered" },
+    { "value": "40%", "label": "Avg. cloud cost reduction" },
+    { "value": "24/7", "label": "Managed operations" },
+    { "value": "99.99%", "label": "SLA on managed estates" }
+  ]
+}

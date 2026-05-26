@@ -1,0 +1,16 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+# The official Netlify Next.js runtime handles SSR + ISR + image optim.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Tell Next that .json files in /content trigger a rebuild when changed
+# (Netlify does this automatically on any git push from Decap CMS commits).
+
+# Don't index the admin or the thanks page on search engines
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

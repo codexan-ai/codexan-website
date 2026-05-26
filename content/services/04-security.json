@@ -1,0 +1,6 @@
+{
+  "order": 4,
+  "title": "Cloud Security & Compliance",
+  "description": "Zero-trust networking, IAM hardening, CIS benchmarks, and audit-ready compliance for SOC 2, ISO 27001, HIPAA, and PCI.",
+  "icon": "security"
+}

@@ -1,0 +1,6 @@
+{
+  "order": 5,
+  "title": "DevOps & Platform Engineering",
+  "description": "CI/CD, GitOps, infrastructure-as-code with Terraform/Pulumi, and internal developer platforms that ship faster, safely.",
+  "icon": "devops"
+}

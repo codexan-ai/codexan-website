@@ -1,0 +1,7 @@
+{
+  "order": 1,
+  "sector": "Fintech",
+  "headline": "Migrated a regulated trading platform to AWS in 4 months",
+  "metric": "62% lower run-rate · zero downtime cutover",
+  "tag": "AWS · Migration"
+}

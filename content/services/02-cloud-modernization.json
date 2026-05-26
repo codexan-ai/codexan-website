@@ -1,0 +1,6 @@
+{
+  "order": 2,
+  "title": "Cloud Modernization",
+  "description": "Containerize legacy apps with Kubernetes, adopt serverless, and rebuild around event-driven, cloud-native architectures.",
+  "icon": "modernization"
+}

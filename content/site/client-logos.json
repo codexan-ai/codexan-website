@@ -1,0 +1,10 @@
+{
+  "logos": [
+    { "name": "Acme Corp" },
+    { "name": "Northwind" },
+    { "name": "Globex" },
+    { "name": "Initech" },
+    { "name": "Umbrella" },
+    { "name": "Stark Inc" }
+  ]
+}

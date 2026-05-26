@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #05060f;
+  color: #e5e7eb;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-7xl mx-auto px-6 sm:px-8;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-neon-cyan via-sky-300 to-neon-violet bg-clip-text text-transparent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold
+           bg-gradient-to-r from-neon-cyan to-neon-violet text-ink-950
+           shadow-[0_0_30px_-5px_rgba(139,92,246,0.6)]
+           hover:shadow-[0_0_40px_-5px_rgba(34,211,238,0.8)] transition-shadow;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold
+           border border-white/15 text-white/90 hover:border-neon-cyan/60 hover:text-white
+           transition-colors;
+  }
+  .card {
+    @apply relative rounded-2xl border border-white/10 bg-white/[0.03] p-6
+           hover:border-neon-cyan/40 transition-all duration-300
+           backdrop-blur-sm;
+  }
+  .card::before {
+    content: "";
+    @apply absolute inset-0 rounded-2xl opacity-0 pointer-events-none
+           bg-gradient-to-br from-neon-cyan/10 via-transparent to-neon-violet/10
+           transition-opacity duration-300;
+  }
+  .card:hover::before { opacity: 1; }
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10
+           px-3 py-1 text-xs font-medium tracking-wider uppercase text-white/70;
+  }
+}
+
+/* Background grid */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34,211,238,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+}
+
+/* Aurora blob */
+.aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px circle at 15% 20%, rgba(34,211,238,0.18), transparent 50%),
+    radial-gradient(700px circle at 85% 30%, rgba(139,92,246,0.22), transparent 55%),
+    radial-gradient(500px circle at 50% 90%, rgba(236,72,153,0.10), transparent 60%);
+  filter: blur(20px);
+}

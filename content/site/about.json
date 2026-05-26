@@ -1,0 +1,14 @@
+{
+  "eyebrow": "About Codexan",
+  "headlineStart": "Cloud engineers who",
+  "headlineAccent": "stay on the pager.",
+  "body": "Codexan was founded by cloud architects from hyperscaler partner ecosystems and Fortune-500 SRE teams. We don't deliver slideware and walk away — every consultancy engagement comes with an optional handover to our 24/7 managed services practice, so the team that designed your platform also runs it.",
+  "facts": [
+    { "label": "Certified", "value": "AWS · Azure · GCP · CKA · CKS" },
+    { "label": "Coverage", "value": "Follow-the-sun across 3 regions" },
+    { "label": "Methodology", "value": "Well-Architected + SRE" },
+    { "label": "Engagement", "value": "Fixed-scope or staff-aug" }
+  ],
+  "uptime": "99.99%",
+  "uptimeLabel": "Rolling 12-month managed estate uptime"
+}

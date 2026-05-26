@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where Decap saves uploaded images
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Optional: short-lived editorial workflow (drafts + review)
+publish_mode: simple
+
+site_url: https://codexan.netlify.app
+display_url: https://codexan.netlify.app
+logo_url: /logo.svg
+
+collections:
+  # -------- Site-wide singletons --------
+  - name: site
+    label: "Site Content"
+    files:
+      - file: "content/site/hero.json"
+        label: "Hero"
+        name: "hero"
+        format: "json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Headline (start)", name: "headlineStart", widget: "string" }
+          - { label: "Headline (accent gradient)", name: "headlineAccent", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - { label: "Primary CTA", name: "primaryCta", widget: "string" }
+          - { label: "Secondary CTA", name: "secondaryCta", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            max: 4
+            min: 1
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+      - file: "content/site/about.json"
+        label: "About"
+        name: "about"
+        format: "json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Headline (start)", name: "headlineStart", widget: "string" }
+          - { label: "Headline (accent gradient)", name: "headlineAccent", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+          - label: "Facts"
+            name: "facts"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - { label: "Uptime value", name: "uptime", widget: "string" }
+          - { label: "Uptime label", name: "uptimeLabel", widget: "string" }
+
+      - file: "content/site/client-logos.json"
+        label: "Client Logos"
+        name: "client_logos"
+        format: "json"
+        fields:
+          - label: "Logos"
+            name: "logos"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+
+  # -------- Services (one file per card) --------
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    folder: "content/services"
+    format: "json"
+    create: true
+    slug: "{{order}}-{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Icon"
+        name: "icon"
+        widget: "select"
+        options:
+          ["migration", "modernization", "managed", "security", "devops", "data"]
+
+  # -------- Case studies --------
+  - name: "case_studies"
+    label: "Case Studies"
+    label_singular: "Case Study"
+    folder: "content/case-studies"
+    format: "json"
+    create: true
+    slug: "{{order}}-{{slug}}"
+    identifier_field: "headline"
+    fields:
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1 }
+      - { label: "Sector", name: "sector", widget: "string" }
+      - { label: "Headline", name: "headline", widget: "string" }
+      - { label: "Metric", name: "metric", widget: "string" }
+      - { label: "Tag (e.g. 'AWS · Migration')", name: "tag", widget: "string" }

@@ -1,0 +1,6 @@
+{
+  "order": 1,
+  "title": "Cloud Migration",
+  "description": "Lift-and-shift, re-platform, or re-architect — we move workloads to AWS, Azure, GCP, or private cloud with zero-surprise cutovers.",
+  "icon": "migration"
+}

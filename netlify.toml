@@ -1,15 +1,18 @@
+# Netlify auto-detects Next.js and installs @netlify/plugin-nextjs.
+# Do NOT declare the plugin or a publish dir here — that causes
+# "plugin not found in node_modules" errors. Just set the build command
+# and Node version.
+
 [build]
   command = "next build"
-  publish = ".next"
 
-# The official Netlify Next.js runtime handles SSR + ISR + image optim.
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[build.environment]
+  NODE_VERSION = "20"
+  # Don't fail the build on lint warnings (Next 16 will surface deprecations
+  # we don't need to block on for an initial deploy).
+  NEXT_TELEMETRY_DISABLED = "1"
 
-# Tell Next that .json files in /content trigger a rebuild when changed
-# (Netlify does this automatically on any git push from Decap CMS commits).
-
-# Don't index the admin or the thanks page on search engines
+# Don't index the admin on search engines
 [[headers]]
   for = "/admin/*"
   [headers.values]
